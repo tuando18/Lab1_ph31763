@@ -80,10 +80,15 @@ public class SignUp extends AppCompatActivity {
     private void dangNhap() {
         Intent intent = new Intent(this, Login.class);
 
-        intent.putExtra("email", edtEmail.getEditText().getText().toString().trim());
+        String email = edtEmail.getEditText().getText().toString().trim();
+        String password = edtMatKhau.getEditText().getText().toString().trim();
+
+        intent.putExtra("email", email);
+        intent.putExtra("password", password);
 
         startActivity(intent);
     }
+
 
     private void dangKy() {
 
@@ -96,9 +101,9 @@ public class SignUp extends AppCompatActivity {
             return;
         }
 
-//        progressDialog.setTitle("Loading");
-//        progressDialog.setMessage("Sẽ mất một lúc vui lòng chờ");
-//        progressDialog.show();
+        progressDialog.setTitle("Loading");
+        progressDialog.setMessage("Sẽ mất một lúc vui lòng chờ");
+        progressDialog.show();
 
         mAuth = FirebaseAuth.getInstance();
 

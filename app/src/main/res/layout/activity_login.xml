@@ -78,7 +78,13 @@
                 android:backgroundTint="#F08726"
                 android:text="Đăng nhập"
                 android:textColor="@color/white" />
-
+            <TextView
+                android:id="@+id/tvQuenMk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Quên mật khẩu?"
+                android:textColor="@color/black" />
             <TextView
                 android:id="@+id/tvChuaCoTk"
                 android:layout_width="wrap_content"

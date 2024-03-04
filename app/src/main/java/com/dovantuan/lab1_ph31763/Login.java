@@ -4,6 +4,7 @@ import static android.content.ContentValues.TAG;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -30,7 +31,7 @@ public class Login extends AppCompatActivity {
     TextView txtchuacotaikoan;
     TextInputLayout txttk, txtmk;
     Button btndangnhap;
-
+    private ProgressDialog progressDialog;
     FirebaseAuth mAuth;
 
     @Override
@@ -55,7 +56,19 @@ public class Login extends AppCompatActivity {
         txttk = findViewById(R.id.edtemaillogin);
         txtmk = findViewById(R.id.edtPassword_login);
         btndangnhap = findViewById(R.id.btndangnhap);
+        progressDialog = new ProgressDialog(this);
 
+        Intent intent = getIntent();
+        if (intent != null) {
+            String emailFromSignUp = intent.getStringExtra("email");
+            String passwordFromSignUp = intent.getStringExtra("password");
+
+            if (emailFromSignUp != null && passwordFromSignUp != null) {
+                // Set email and password in the respective TextInputLayouts
+                txttk.getEditText().setText(emailFromSignUp);
+                txtmk.getEditText().setText(passwordFromSignUp);
+            }
+        }
 
         btndangnhap.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,6 +100,9 @@ public class Login extends AppCompatActivity {
             Toast.makeText(this, "Email và mật khẩu không được để trống", Toast.LENGTH_SHORT).show();
             return;
         }
+        progressDialog.setTitle("Loading");
+        progressDialog.setMessage("Sẽ mất một lúc vui lòng chờ");
+        progressDialog.show();
 
         // Perform the login action using Firebase Authentication
         mAuth.signInWithEmailAndPassword(email, password)
