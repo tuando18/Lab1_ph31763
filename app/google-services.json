@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "239094844578",
+    "project_id": "my-first-project-25b53",
+    "storage_bucket": "my-first-project-25b53.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239094844578:android:ee558a3dd878547fc19bfb",
+        "android_client_info": {
+          "package_name": "com.dovantuan.lab1_ph31763"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC04RW6r6dlFYI9EA0-yQeGN4A2oUEuDbo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
