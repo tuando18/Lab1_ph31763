@@ -18,33 +18,19 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
-
-//    private FirebaseAuth mAuth;
-//
-//    @Override
-//    public void onStart() {
-//        super.onStart();
-//
-//        mAuth = FirebaseAuth.getInstance();
-//
-//        // Check if user is signed in (non-null) and update UI accordingly.
-//        FirebaseUser currentUser = mAuth.getCurrentUser();
-//        if(currentUser != null){
-//            // neu user da dang nhap vao tu phien truoc thi su dung user luon
-//        }
-//    }
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        mAuth = FirebaseAuth.getInstance();
         Button btnLogOut = findViewById(R.id.btnLogOut);
         btnLogOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ManHinhCho.class);
-                startActivity(intent);
+                mAuth.signOut();
+                startActivity(new Intent(MainActivity.this, ManHinhCho.class));
                 finish();
             }
         });

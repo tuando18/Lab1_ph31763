@@ -15,16 +15,17 @@
         android:orientation="vertical">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edtPhone"
             android:layout_width="380dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtPhone"
                 android:layout_width="380dp"
                 android:layout_height="wrap_content"
                 android:hint="Phone number"
+                android:inputType="number"
                 android:maxLines="1"
                 android:textColor="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -32,15 +33,14 @@
         <Button
             android:id="@+id/btnGetOtp"
             android:layout_width="256dp"
-            android:layout_gravity="center"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:backgroundTint="#F08726"
             android:text="GET OTP"
             android:textColor="@color/white" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edtOtp"
             android:layout_width="380dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -50,14 +50,16 @@
                 android:layout_width="380dp"
                 android:layout_height="wrap_content"
                 android:hint="OTP"
-                android:textColor="@color/black" />
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:id="@+id/edtOtp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="256dp"
-            android:layout_gravity="center"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:backgroundTint="#F08726"
             android:text="LOGIN"

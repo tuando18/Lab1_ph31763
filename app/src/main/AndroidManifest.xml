@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Lab1_ph31763"
         tools:targetApi="31">
         <activity
+            android:name=".LogOut_OTP"
+            android:exported="false" />
+        <activity
             android:name=".loginSdt"
             android:exported="false" />
         <activity
