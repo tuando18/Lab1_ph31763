@@ -38,7 +38,7 @@ public class ManHinhCho extends AppCompatActivity {
     }
 
     private void loginSdt() {
-        Intent intent = new Intent(ManHinhCho.this, loginSdt.class);
+        Intent intent = new Intent(ManHinhCho.this, LoginOTPActivity.class);
         startActivity(intent);
     }
 }
