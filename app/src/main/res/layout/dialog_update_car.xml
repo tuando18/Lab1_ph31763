@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_shape"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Tên"
+            android:textColor="@color/black"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/ed_tenUp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Nhập tên"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black"
+            android:textSize="23sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Năm sản xuất"
+            android:textColor="@color/black"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/ed_namSxUp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Nhập năm sản xuất "
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black"
+            android:textSize="23sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Hãng"
+            android:textColor="@color/black"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/ed_hangUp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Nhập hãng"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:textSize="23sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Giá"
+            android:textColor="@color/black"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/ed_giaUp"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:hint="Nhập giá"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black"
+            android:textSize="23sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnUpdate"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="50dp"
+                android:background="#9AD2FC"
+                android:text="Sửa"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="23dp" />
+
+            <Button
+                android:id="@+id/btnHuyUp"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:background="#F95B5B"
+                android:text="Hủy"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>

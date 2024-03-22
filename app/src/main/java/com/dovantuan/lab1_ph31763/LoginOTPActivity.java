@@ -7,8 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -114,7 +112,7 @@ public class LoginOTPActivity extends AppCompatActivity {
                             // Successful login
                             Toast.makeText(LoginOTPActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
                             // Chuyển sang MainActivity
-                            startActivity(new Intent(LoginOTPActivity.this, MainActivity.class));
+                            startActivity(new Intent(LoginOTPActivity.this, ListView.class));
                             finish(); // Đóng Activity hiện tại để ngăn người dùng quay lại màn hình OTP
                         } else {
 

@@ -2,23 +2,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ListView">
 
-    <TextView
-        android:id="@+id/textView"
+    <ListView
+        android:id="@+id/lvCity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:text="Quản lý Xe" />
-
-    <ListView
-        android:id="@+id/listviewMain"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/textView"
+        android:layout_above="@id/btnLogOut"
         android:padding="10dp" />
 
     <ImageView
@@ -29,8 +21,19 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="14dp"
         android:layout_marginRight="10dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="73dp"
         android:src="@drawable/ic_add"
         android:text="Nút nổi" />
+
+    <Button
+        android:id="@+id/btnLogOut"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#F08726"
+        android:text="LOG OUT"
+        android:textColor="@color/white" />
 
 </RelativeLayout>

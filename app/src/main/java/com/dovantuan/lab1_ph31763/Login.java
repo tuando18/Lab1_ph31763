@@ -9,7 +9,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.TextView;
 
 import android.util.Log;
@@ -23,8 +22,6 @@ import com.google.firebase.auth.FirebaseUser;
 
 
 import com.google.android.material.textfield.TextInputLayout;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 public class Login extends AppCompatActivity {
 
@@ -123,7 +120,7 @@ public class Login extends AppCompatActivity {
                             FirebaseUser user = mAuth.getCurrentUser();
 
                             // You may want to redirect to another activity or perform other actions here
-                            Intent intent = new Intent(Login.this, MainActivity.class);
+                            Intent intent = new Intent(Login.this, ListView.class);
                             startActivity(intent);
                             finish(); // Close the current Login activity
 
